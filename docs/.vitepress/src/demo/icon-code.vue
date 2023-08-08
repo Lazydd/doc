@@ -18,7 +18,7 @@
     </i>
 </template>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 i {
     color: inherit;
     height: 1em;

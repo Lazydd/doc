@@ -34,6 +34,8 @@ import ddButton from '../components/dd-button.vue';
 
 :::demo dd-button
 <ddButton>11</ddButton>
+<ddButton>22</ddButton>
+<ddButton>33</ddButton>
 ::: 
 
 <!-- 指定端口启动

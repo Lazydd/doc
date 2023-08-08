@@ -5,7 +5,8 @@ import IconCopy from "./icon-copy.vue";
 import IconCode from "./icon-code.vue";
 import IconTop from "./icon-top.vue";
 import IconSuccess from "./icon-success.vue";
-
+import Transfer from "../transfer/index.vue";
+import Tooltip from "../tooltip/index.vue";
 import SourceCode from "./source-code.vue";
 
 const [sourceVisible, toggleSourceVisible] = useToggle();
@@ -48,9 +49,13 @@ onMounted(() => {
                 <slot />
             </div>
             <div class="op-btns">
-                <IconCopy v-show="!copySuccess" @click="copyCode" />
+                <Tooltip content="复制代码" placement="top">
+                    <IconCopy v-show="!copySuccess" @click="copyCode" />
+                </Tooltip>
                 <IconSuccess v-show="copySuccess" @mouseleave="mouseleave" />
-                <IconCode @click="toggleSourceVisible()"></IconCode>
+                <Tooltip content="查看源代码" placement="top">
+                    <IconCode @click="toggleSourceVisible()" />
+                </Tooltip>
             </div>
             <Transfer>
                 <SourceCode v-show="sourceVisible" :source="source" />
@@ -69,7 +74,7 @@ onMounted(() => {
     </ClientOnly>
 </template>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 .m-0 {
     margin: 0;
 }
