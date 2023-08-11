@@ -25,6 +25,9 @@ const highlight = (str: string, lang: string) => {
     if (lang === "ts") {
         lang = "typescript";
     }
+    if (lang === "js") {
+        lang = "javascript";
+    }
     if (lang === "py") {
         lang = "python";
     }

@@ -1,21 +1,22 @@
 <template>
     <button
-        :class="['dd-button', type, size, { plain }]"
-        :disabled="disabled"
-        :round="round"
-        :circle="circle"
-        :loading="loading"
+        :class="[
+            'dd-button',
+            type,
+            size,
+            { plain, round, circle, disabled, loading },
+        ]"
         @click="$emit('click')"
     >
-        <!-- <dd-icon v-if="loading" icon="icon-loading" class="loading" />
-            <dd-icon v-if="icon" :icon="icon" /> -->
+        <ddIcon v-if="loading" icon="icon-loading" class="loading" />
+        <ddIcon v-if="icon" :icon="icon" />
         <span :class="['des', { ml5: icon }]" v-if="$slots.default">
             <slot />
         </span>
     </button>
 </template>
-
 <script setup lang="ts">
+import ddIcon from "./dd-icon.vue";
 const props = withDefaults(
     defineProps<{
         type?: string;
@@ -47,12 +48,20 @@ const props = withDefaults(
         transform: rotate(360deg);
     }
 }
-.loading {
-    margin-right: 5px;
-    animation: loading 2s linear infinite;
-}
+
 .dd-button {
     display: inline-block;
+    &.round {
+        border-radius: 20px;
+    }
+    &.circle {
+        border-radius: 50%;
+        padding: 12px;
+    }
+    .loading {
+        margin-right: 5px;
+        animation: loading 2s linear infinite;
+    }
 }
 
 button {
@@ -76,6 +85,7 @@ button {
     font-size: 14px;
     border-radius: 4px;
 }
+
 //type
 .default {
     &:hover,
@@ -95,20 +105,13 @@ button {
             color: #409eff;
         }
     }
-    &[disabled] {
+    &.disabled {
         cursor: not-allowed !important;
         color: #c0c4cc !important;
         background-color: #fff !important;
         border-color: #ebeef5 !important;
     }
-    &[round] {
-        border-radius: 20px;
-    }
-    &[circle] {
-        border-radius: 50%;
-        padding: 12px;
-    }
-    &[loading] {
+    &.loading {
         pointer-events: none;
         cursor: default !important;
         color: #c0c4cc !important;
@@ -137,20 +140,13 @@ button {
             color: #fff;
         }
     }
-    &[disabled] {
+    &.disabled {
         cursor: not-allowed !important;
         color: #fff !important;
         background-color: #a0cfff !important;
         border-color: #a0cfff !important;
     }
-    &[round] {
-        border-radius: 20px;
-    }
-    &[circle] {
-        border-radius: 50%;
-        padding: 12px;
-    }
-    &[loading] {
+    &.loading {
         pointer-events: none;
         cursor: default !important;
         color: #fff !important;
@@ -179,20 +175,13 @@ button {
             border-color: #67c23a;
         }
     }
-    &[disabled] {
+    &.disabled {
         cursor: not-allowed !important;
         color: #fff !important;
         background-color: #b3e19d !important;
         border-color: #b3e19d !important;
     }
-    &[round] {
-        border-radius: 20px;
-    }
-    &[circle] {
-        border-radius: 50%;
-        padding: 12px;
-    }
-    &[loading] {
+    &.loading {
         pointer-events: none;
         cursor: default !important;
         color: #fff !important;
@@ -221,20 +210,13 @@ button {
             color: #fff;
         }
     }
-    &[disabled] {
+    &.disabled {
         cursor: not-allowed !important;
         color: #fff !important;
         background-color: #c8c9cc !important;
         border-color: #c8c9cc !important;
     }
-    &[round] {
-        border-radius: 20px;
-    }
-    &[circle] {
-        border-radius: 50%;
-        padding: 12px;
-    }
-    &[loading] {
+    &.loading {
         pointer-events: none;
         cursor: default !important;
         color: #fff !important;
@@ -263,20 +245,13 @@ button {
             border-color: #e6a23c;
         }
     }
-    &[disabled] {
+    &.disabled {
         cursor: not-allowed !important;
         color: #fff !important;
         background-color: #f3d19e !important;
         border-color: #f3d19e !important;
     }
-    &[round] {
-        border-radius: 20px;
-    }
-    &[circle] {
-        border-radius: 50%;
-        padding: 12px;
-    }
-    &[loading] {
+    &.loading {
         pointer-events: none;
         cursor: default !important;
         color: #fff !important;
@@ -305,20 +280,13 @@ button {
             border-color: #f56c6c;
         }
     }
-    &[disabled] {
+    &.disabled {
         cursor: not-allowed !important;
         color: #fff !important;
         background-color: #fab6b6 !important;
         border-color: #fab6b6 !important;
     }
-    &[round] {
-        border-radius: 20px;
-    }
-    &[circle] {
-        border-radius: 50%;
-        padding: 12px;
-    }
-    &[loading] {
+    &.loading {
         pointer-events: none;
         cursor: default !important;
         color: #fff !important;
