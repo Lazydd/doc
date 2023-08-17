@@ -10,13 +10,16 @@
     >
         <ddIcon v-if="loading" icon="icon-loading" class="loading" />
         <ddIcon v-if="icon" :icon="icon" />
-        <span :class="['des', { ml5: icon }]" v-if="$slots.default">
+        <span :class="{ ml5: icon || loading }" v-if="$slots.default">
             <slot />
         </span>
     </button>
 </template>
 <script setup lang="ts">
 import ddIcon from "./dd-icon.vue";
+defineOptions({
+    name: "ddButton",
+});
 const props = withDefaults(
     defineProps<{
         type?: string;
@@ -29,8 +32,8 @@ const props = withDefaults(
         icon?: string;
     }>(),
     {
-        type: "default",
-        size: "big",
+        type: "",
+        size: "default",
         circle: false,
         disabled: false,
         plain: false,
@@ -50,23 +53,9 @@ const props = withDefaults(
 }
 
 .dd-button {
-    display: inline-block;
-    &.round {
-        border-radius: 20px;
-    }
-    &.circle {
-        border-radius: 50%;
-        padding: 12px;
-    }
-    .loading {
-        margin-right: 5px;
-        animation: loading 2s linear infinite;
-    }
-}
-
-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     line-height: 1;
     white-space: nowrap;
     cursor: pointer;
@@ -81,13 +70,20 @@ button {
     transition: 0.1s;
     font-weight: 500;
     user-select: none;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-radius: 4px;
-}
 
-//type
-.default {
+    &.round {
+        border-radius: 20px;
+    }
+    &.circle {
+        border-radius: 50%;
+        padding: 8px;
+    }
+    .loading {
+        animation: loading 2s linear infinite;
+        pointer-events: none;
+        cursor: inherit !important;
+        color: inherit;
+    }
     &:hover,
     &:focus {
         background: #ecf5ff;
@@ -112,13 +108,16 @@ button {
         border-color: #ebeef5 !important;
     }
     &.loading {
-        pointer-events: none;
-        cursor: default !important;
-        color: #c0c4cc !important;
         background-color: #fff !important;
         border-color: #ebeef5 !important;
     }
+
+    > span {
+        display: flex;
+        align-items: center;
+    }
 }
+//type
 .primary {
     color: #fff;
     background-color: #409eff;
@@ -147,9 +146,6 @@ button {
         border-color: #a0cfff !important;
     }
     &.loading {
-        pointer-events: none;
-        cursor: default !important;
-        color: #fff !important;
         background-color: #a0cfff !important;
         border-color: #a0cfff !important;
     }
@@ -182,9 +178,6 @@ button {
         border-color: #b3e19d !important;
     }
     &.loading {
-        pointer-events: none;
-        cursor: default !important;
-        color: #fff !important;
         background-color: #b3e19d !important;
         border-color: #b3e19d !important;
     }
@@ -217,9 +210,6 @@ button {
         border-color: #c8c9cc !important;
     }
     &.loading {
-        pointer-events: none;
-        cursor: default !important;
-        color: #fff !important;
         background-color: #c8c9cc !important;
         border-color: #c8c9cc !important;
     }
@@ -252,9 +242,6 @@ button {
         border-color: #f3d19e !important;
     }
     &.loading {
-        pointer-events: none;
-        cursor: default !important;
-        color: #fff !important;
         background-color: #f3d19e !important;
         border-color: #f3d19e !important;
     }
@@ -287,27 +274,27 @@ button {
         border-color: #fab6b6 !important;
     }
     &.loading {
-        pointer-events: none;
-        cursor: default !important;
-        color: #fff !important;
         background-color: #fab6b6 !important;
         border-color: #fab6b6 !important;
     }
 }
 
 //size
-.medium {
-    padding: 10px 20px;
+.large {
+    padding: 12px 19px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.default {
+    padding: 8px 15px;
+    height: 32px;
     font-size: 14px;
     border-radius: 4px;
 }
 .small {
-    padding: 9px 15px;
-    font-size: 12px;
-    border-radius: 3px;
-}
-.mini {
-    padding: 7px 15px;
+    padding: 5px 11px;
+    height: 24px;
     font-size: 12px;
     border-radius: 3px;
 }

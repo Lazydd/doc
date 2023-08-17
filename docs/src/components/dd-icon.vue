@@ -1,12 +1,6 @@
 <template>
     <i class="dd-icon" @click="$emit('click')">
-        <svg
-            class="icon"
-            aria-hidden="true"
-            :style="{ fill: color }"
-            width="1em"
-            height="1em"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" :style="{ fill: color }">
             <use :xlink:href="`#${icon}`" />
         </svg>
     </i>
@@ -33,8 +27,11 @@ const props = defineProps<{
     align-items: center;
     position: relative;
     fill: currentColor;
+    font-size: inherit;
     svg {
-        display: inline-flex;
+        height: inherit;
+        width: inherit;
+        line-height: inherit;
     }
 }
 </style>
