@@ -1,11 +1,9 @@
-import { headerPlugin } from "./headerMdPlugin";
-import mdContainer from "markdown-it-container";
+import { headerPlugin } from "./plugin/headerMdPlugin";
 import {
     demoblockPlugin,
     demoblockVitePlugin,
 } from "vitepress-theme-demoblock-fork";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import plugin from "./plugin";
 export default {
     title: "ddlazy-ui",
     description: "A Component Library for Vue.js.",
@@ -16,13 +14,13 @@ export default {
                 src: "https://at.alicdn.com/t/font_3116237_st7bhqgkyyc.js",
             },
         ],
-        // [
-        //     "link",
-        //     {
-        //         href: "https://cdn.ddlazy.cn/map/main.css",
-        //         rel: "stylesheet",
-        //     },
-        // ],
+        [
+            "link",
+            {
+                href: "https://cdn.ddlazy.cn/map/main.css",
+                rel: "stylesheet",
+            },
+        ],
     ],
     outDir: "../dist",
     srcDir: "src",
@@ -35,7 +33,6 @@ export default {
             md.use(demoblockPlugin, {
                 customClass: "demoblock-custom",
             });
-            // md.use(mdContainer, "demo", plugin);
         },
     },
     vue: {

@@ -1,5 +1,5 @@
 import DefaultTheme from "vitepress/theme";
-// import Demo from "../src/demo/index.vue";
+
 import Demo from "vitepress-theme-demoblock-fork/dist/client/components/Demo.vue";
 import DemoBlock from "vitepress-theme-demoblock-fork/dist/client/components/DemoBlock.vue";
 import "vitepress-theme-demoblock-fork/dist/theme/styles/index.css";

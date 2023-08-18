@@ -16,6 +16,8 @@
   "author": "ddlazy",
   "license": "MIT",
   "devDependencies": {
+    "less": "^4.2.0",
+    "typescript": "^5.1.6",
     "vitepress": "^1.0.0-beta.7"
   },
   "dependencies": {
@@ -23,7 +25,6 @@
     "@types/node": "^20.4.8",
     "@vitejs/plugin-vue-jsx": "3.0.1",
     "@vueuse/core": "^10.3.0",
-    "less": "^4.2.0",
     "markdown-it-container": "^3.0.0",
     "vitepress-theme-demoblock": "^3.0.3",
     "vitepress-theme-demoblock-fork": "^3.0.3",
