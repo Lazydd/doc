@@ -15,7 +15,7 @@
     </button>
 </template>
 <script setup lang="ts">
-import ddIcon from "./dd-icon.vue";
+import ddIcon from "../dd-icon/dd-icon.vue";
 defineOptions({
     name: "ddButton",
 });

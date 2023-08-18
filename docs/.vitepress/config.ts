@@ -132,5 +132,14 @@ function getGuide() {
                 },
             ],
         },
+        {
+            text: "Notice",
+            items: [
+                {
+                    text: "Message 消息提示",
+                    link: "/guide/message",
+                },
+            ],
+        },
     ];
 }
