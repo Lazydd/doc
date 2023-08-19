@@ -7,14 +7,17 @@ import "vitepress-theme-demoblock-fork/dist/theme/styles/index.css";
 import "../style/main.css";
 import "../style/vars.css";
 import "../style/scroll.css";
-import ddButton from "../../src/components/dd-button.vue";
-import ddIcon from "../../src/components/dd-icon.vue";
+
+import { ddButton, ddIcon } from "../../../lib/ddlazy-ui-plus.es";
+// import ddlazyUi from "../../../lib/ddlazy-ui-plus.es";
+import "../../../lib/index.css";
 export default {
     ...DefaultTheme,
     enhanceApp: ({ app }) => {
         app.component("Demo", Demo);
         app.component("DemoBlock", DemoBlock);
-        app.component(ddButton.name, ddButton);
-        app.component(ddIcon.name, ddIcon);
+        app.use(ddButton);
+        app.use(ddIcon);
+        // app.use(ddlazyUi);
     },
 };

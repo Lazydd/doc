@@ -1,5 +1,7 @@
+import { App } from "vue";
+
 const install = (component) => {
-    component.install = (app) => {
+    component.install = (app: App) => {
         app.component(component.name, component);
     };
     return component;

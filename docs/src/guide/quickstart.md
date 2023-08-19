@@ -9,23 +9,25 @@
 ### 完整引入
 
 ```js
-import Vue from "vue";
-import ddlazyui from "ddlazyui";
-import "ddlazyui/lib/ddlazy-ui.css";
+import { createApp } from "vue";
+import ddlazyUi from "ddlazy-ui-plus";
+import "ddlazy-ui-plus/lib/index.css";
 import App from "./App.vue";
 
-Vue.use(ddlazyui);
+const app = createApp(App);
 
-new Vue({
-    el: "#app",
-    render: (h) => h(App),
-});
+app.use(ddlazyUi);
+app.mount("#app");
 ```
 
 ### 按需引入
 
 ```js
-import Vue from "vue";
+import { createApp } from "vue";
+import "ddlazy-ui-plus/lib/index.css";
+import App from "./App.vue";
+
+const app = createApp(App);
 import {
     ddButton,
     ddIcon,
@@ -97,75 +99,75 @@ import {
     Message,
     ddLoading,
     ddMessageBox,
-} from "ddlazy-ui";
+} from "ddlazy-ui-plus";
 
-Vue.use(ddButton);
-Vue.use(ddIcon);
-Vue.use(ddLink);
-Vue.use(ddRow);
-Vue.use(ddCol);
-Vue.use(ddTable);
-Vue.use(ddTableColumn);
-Vue.use(ddRadio);
-Vue.use(ddRadioGroup);
-Vue.use(ddRadioButton);
-Vue.use(ddCheckbox);
-Vue.use(ddCheckboxGroup);
-Vue.use(ddCheckboxButton);
-Vue.use(ddInput);
-Vue.use(ddInputNumber);
-Vue.use(ddSelect);
-Vue.use(ddOption);
-Vue.use(ddScroll);
-Vue.use(ddSwitch);
-Vue.use(ddSlider);
-Vue.use(ddTag);
-Vue.use(ddProgress);
-Vue.use(ddUpload);
-Vue.use(ddColorPicker);
-Vue.use(ddTooltip);
-Vue.use(ddPagination);
-Vue.use(ddBadge);
-Vue.use(ddAvatar);
-Vue.use(ddTabs);
-Vue.use(ddTabPane);
-Vue.use(ddBreadcrumb);
-Vue.use(ddBreadcrumbItem);
-Vue.use(ddCard);
-Vue.use(ddDivider);
-Vue.use(ddBacktop);
-Vue.use(ddDialog);
-Vue.use(ddForm);
-Vue.use(ddFormItem);
-Vue.use(ddEmpty);
-Vue.use(ddTree);
-Vue.use(ddSkeleton);
-Vue.use(ddCollapse);
-Vue.use(ddCollapseItem);
-Vue.use(ddPopconfirm);
-Vue.use(ddSteps);
-Vue.use(ddStep);
-Vue.use(ddTransfer);
-Vue.use(ddCarousel);
-Vue.use(ddCarouselItem);
-Vue.use(ddTimeline);
-Vue.use(ddTimelineItem);
-Vue.use(ddDropdown);
-Vue.use(ddDropdownMenu);
-Vue.use(ddDropdownItem);
-Vue.use(ddTimeSelect);
-Vue.use(ddTransition);
-Vue.use(ddTimePicker);
-Vue.use(ddCascader);
-Vue.use(ddImage);
-Vue.use(ddDatePicker);
-Vue.use(ddMenu);
-Vue.use(ddEcharts);
-Vue.use(ddUeditor);
-Vue.use(ddMap);
-Vue.use(ddSignature);
-Vue.use(ddPrint);
-Vue.use(Message);
-Vue.use(ddLoading);
-Vue.use(ddMessageBox);
+app.use(ddButton);
+app.use(ddIcon);
+app.use(ddLink);
+app.use(ddRow);
+app.use(ddCol);
+app.use(ddTable);
+app.use(ddTableColumn);
+app.use(ddRadio);
+app.use(ddRadioGroup);
+app.use(ddRadioButton);
+app.use(ddCheckbox);
+app.use(ddCheckboxGroup);
+app.use(ddCheckboxButton);
+app.use(ddInput);
+app.use(ddInputNumber);
+app.use(ddSelect);
+app.use(ddOption);
+app.use(ddScroll);
+app.use(ddSwitch);
+app.use(ddSlider);
+app.use(ddTag);
+app.use(ddProgress);
+app.use(ddUpload);
+app.use(ddColorPicker);
+app.use(ddTooltip);
+app.use(ddPagination);
+app.use(ddBadge);
+app.use(ddAvatar);
+app.use(ddTabs);
+app.use(ddTabPane);
+app.use(ddBreadcrumb);
+app.use(ddBreadcrumbItem);
+app.use(ddCard);
+app.use(ddDivider);
+app.use(ddBacktop);
+app.use(ddDialog);
+app.use(ddForm);
+app.use(ddFormItem);
+app.use(ddEmpty);
+app.use(ddTree);
+app.use(ddSkeleton);
+app.use(ddCollapse);
+app.use(ddCollapseItem);
+app.use(ddPopconfirm);
+app.use(ddSteps);
+app.use(ddStep);
+app.use(ddTransfer);
+app.use(ddCarousel);
+app.use(ddCarouselItem);
+app.use(ddTimeline);
+app.use(ddTimelineItem);
+app.use(ddDropdown);
+app.use(ddDropdownMenu);
+app.use(ddDropdownItem);
+app.use(ddTimeSelect);
+app.use(ddTransition);
+app.use(ddTimePicker);
+app.use(ddCascader);
+app.use(ddImage);
+app.use(ddDatePicker);
+app.use(ddMenu);
+app.use(ddEcharts);
+app.use(ddUeditor);
+app.use(ddMap);
+app.use(ddSignature);
+app.use(ddPrint);
+app.use(Message);
+app.use(ddLoading);
+app.use(ddMessageBox);
 ```

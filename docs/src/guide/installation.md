@@ -5,15 +5,15 @@
 ::: code-group
 
 ```sh [npm]
-> npm i ddlazy-ui -S
+> npm i ddlazy-ui-plus -S
 ```
 
 ```sh [pnpm]
-> pnpm i ddlazy-ui -S
+> pnpm i ddlazy-ui-plus -S
 ```
 
 ```sh [yarn]
-> yarn add ddlazy-ui
+> yarn add ddlazy-ui-plus
 ```
 
 :::
@@ -24,10 +24,10 @@
 <!-- 引入样式 -->
 <link
     rel="stylesheet"
-    href="https://cdn.ddlazy.cn/ddlazy-ui/lib/theme-chalk/index.css"
+    href="https://cdn.ddlazy.cn/ddlazy-ui-plus/lib/theme-chalk/index.css"
 />
 <!-- 引入组件库 -->
-<script src="https://cdn.ddlazy.cn/ddlazy-ui/lib/index.js" />
+<script src="https://cdn.ddlazy.cn/ddlazy-ui-plus/lib/index.js" />
 ```
 
 <!-- 指定端口启动
