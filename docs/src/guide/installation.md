@@ -22,10 +22,7 @@
 
 ```html
 <!-- 引入样式 -->
-<link
-    rel="stylesheet"
-    href="https://cdn.ddlazy.cn/ddlazy-ui-plus/lib/theme-chalk/index.css"
-/>
+<link rel="stylesheet" href="https://cdn.ddlazy.cn/ddlazy-ui-plus/lib/theme-chalk/index.css" />
 <!-- 引入组件库 -->
 <script src="https://cdn.ddlazy.cn/ddlazy-ui-plus/lib/index.js" />
 ```
