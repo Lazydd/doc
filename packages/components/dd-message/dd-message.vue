@@ -27,6 +27,9 @@ export type messageType = {
 	content: any;
 	type: string;
 };
+defineOptions({
+	name: 'ddMessage',
+});
 let seed = 0;
 function getUuid() {
 	return 'message_' + seed++;

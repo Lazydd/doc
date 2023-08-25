@@ -42,6 +42,11 @@ export default {
 	},
 	vite: {
 		plugins: [demoblockVitePlugin(), vueJsx()],
+		resolve: {
+			alias: {
+				'@': process.cwd(),
+			},
+		},
 	},
 	locales: {
 		root: {
@@ -109,20 +114,12 @@ function getGuide() {
 			text: 'Basic',
 			items: [
 				{
-					text: 'Layout 布局',
-					link: '/guide/installation',
-				},
-				{
 					text: 'Icon 图标',
-					link: '/guide/quickstart',
+					link: '/guide/icon',
 				},
 				{
 					text: 'Button 按钮',
 					link: '/guide/button',
-				},
-				{
-					text: 'Link 文字链接',
-					link: '/guide/transition',
 				},
 			],
 		},

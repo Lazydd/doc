@@ -32,17 +32,17 @@
 			<ddButton type="danger" round>危险按钮</ddButton>
 		</div>
 		<div class="mt1">
-			<ddButton icon="icon-eletrical" circle />
-			<ddButton icon="icon-video1" type="primary" circle />
-			<ddButton icon="icon-electronics" type="success" circle />
-			<ddButton icon="icon-email" type="info" circle />
-			<ddButton icon="icon-furniture" type="warning" circle />
-			<ddButton icon="icon-gift1" type="danger" circle />
+			<ddButton icon="eletrical" circle />
+			<ddButton icon="video1" type="primary" circle />
+			<ddButton icon="electronics" type="success" circle />
+			<ddButton icon="email" type="info" circle />
+			<ddButton icon="furniture" type="warning" circle />
+			<ddButton icon="gift1" type="danger" circle />
 		</div>
 	</div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .dd-button + .dd-button {
 	margin-left: 12px;
 }
@@ -70,7 +70,7 @@
 	</div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .dd-button + .dd-button {
 	margin-left: 12px;
 }
@@ -86,19 +86,19 @@
 ```vue
 <template>
 	<div>
-		<ddButton type="primary" icon="icon-auto" />
-		<ddButton type="primary" icon="icon-map" />
-		<ddButton type="primary" icon="icon-account" />
-		<ddButton type="primary" icon="icon-search">搜索</ddButton>
+		<ddButton type="primary" icon="auto" />
+		<ddButton type="primary" icon="map" />
+		<ddButton type="primary" icon="account" />
+		<ddButton type="primary" icon="search">搜索</ddButton>
 		<ddButton type="primary">搜索</ddButton>
 		<ddButton type="primary">
 			搜索
-			<ddIcon icon="icon-search" />
+			<ddIcon icon="search" />
 		</ddButton>
 	</div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .dd-button + .dd-button {
 	margin-left: 12px;
 }
@@ -120,7 +120,7 @@
 	</div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .dd-button + .dd-button {
 	margin-left: 12px;
 }

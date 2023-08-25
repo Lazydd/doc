@@ -4,12 +4,12 @@ ddlazy-ui 内应用在部分组件的过渡动画，你也可以直接使用。
 
 ## fade 淡入淡出
 
-<!-- <CodeRun auto editable> -->
+:::demo
 
 ```vue
 <template>
 	<div>
-		<dd-button @click="show = !show">Click Me</dd-button>
+		<ddButton @click="show = !show">Click Me</ddButton>
 		<div style="display: flex; margin-top: 20px; height: 100px">
 			<transition name="dd-fade">
 				<div v-show="show" class="transition-box">.dd-fade</div>
@@ -18,14 +18,9 @@ ddlazy-ui 内应用在部分组件的过渡动画，你也可以直接使用。
 	</div>
 </template>
 
-<script>
-export default {
-	data() {
-		return {
-			show: true,
-		};
-	},
-};
+<script setup lang="ts">
+import { ref } from 'vue';
+const show = ref(true);
 </script>
 
 <style lang="less" scoped>
@@ -44,12 +39,16 @@ export default {
 </style>
 ```
 
+:::
+
 ## zoom 缩放
+
+:::demo
 
 ```vue
 <template>
 	<div>
-		<dd-button @click="show = !show">Click Me</dd-button>
+		<ddButton @click="show = !show">Click Me</ddButton>
 		<div class="zoom">
 			<transition name="dd-zoom-center">
 				<div v-show="show" class="transition-box">.dd-zoom-center</div>
@@ -75,14 +74,9 @@ export default {
 	</div>
 </template>
 
-<script>
-export default {
-	data() {
-		return {
-			show: true,
-		};
-	},
-};
+<script setup lang="ts">
+import { ref } from 'vue';
+const show = ref(true);
 </script>
 
 <style lang="less" scoped>
@@ -106,32 +100,31 @@ export default {
 </style>
 ```
 
+:::
+
 ## collapse 展开折叠
+
+:::demo
 
 ```vue
 <template>
 	<div class="fold">
-		<dd-button @click="show = !show">Click Me</dd-button>
-		<div style="height: 320px">
-			<dd-transition>
+		<ddButton @click="show = !show">Click Me</ddButton>
+		<div style="height: 320px; marginTop:20px">
+			<ddTransition>
 				<div v-show="show">
 					<div class="transition-box">折叠</div>
 					<div class="transition-box">折叠</div>
 					<div class="transition-box">折叠</div>
 				</div>
-			</dd-transition>
+			</ddTransition>
 		</div>
 	</div>
 </template>
 
-<script>
-export default {
-	data() {
-		return {
-			show: true,
-		};
-	},
-};
+<script setup lang="ts">
+import { ref } from 'vue';
+const show = ref(true);
 </script>
 
 <style lang="less" scoped>
@@ -147,11 +140,7 @@ export default {
 	box-sizing: border-box;
 	margin-right: 20px;
 }
-.fold {
-	.dd-transition {
-		margin-top: 20px;
-		height: 320px;
-	}
-}
 </style>
 ```
+
+:::
