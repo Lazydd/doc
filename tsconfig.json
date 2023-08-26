@@ -9,12 +9,13 @@
       "allowJs": true,
       "strict": false,
       "jsx": "preserve",
+      "types": ["vite/client"],
       "baseUrl": ".",
       "paths": {
         "@theme/*": [".vitepress/theme/*"]
       }
     },
-    "include": ["env.d.ts", "src/**/*", ".vitepress/**/*",".vitepress/theme/*","docs/**/*","packages/**/*"],
+    "include": ["env.d.ts", "src/**/*", ".vitepress/**/*",".vitepress/theme/*","docs/**/*","packages/**/*", "docs/.vitepress/theme/icon.vue.ts"],
     "exclude": ["node_modules/**/*"],
   }
   

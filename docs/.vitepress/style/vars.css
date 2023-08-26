@@ -3,24 +3,24 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-c-white: #ffffff;
-    --vp-c-black: #000000;
-    --vp-c-brand: #0086c9;
-    --vp-c-brand-light: #0086c9;
-    --vp-c-brand-lighter: #0086c9;
-    --vp-c-brand-dark: #0086c9;
-    --vp-c-brand-darker: #0086c9;
-    /* fix contrast on gray cards: used by --vp-c-text-2 */
-    --vp-c-text-light-2: rgba(56 56 56 / 70%);
-    /* fix contrast: lang name on gray code block */
-    --vp-c-text-dark-3: rgba(180, 180, 180, 0.7);
+	--vp-c-white: #ffffff;
+	--vp-c-black: #000000;
+	--vp-c-brand: #0086c9;
+	--vp-c-brand-light: #0086c9;
+	--vp-c-brand-lighter: #0086c9;
+	--vp-c-brand-dark: #0086c9;
+	--vp-c-brand-darker: #0086c9;
+	/* fix contrast on gray cards: used by --vp-c-text-2 */
+	--vp-c-text-light-2: rgba(56 56 56 / 70%);
+	/* fix contrast: lang name on gray code block */
+	--vp-c-text-dark-3: rgba(180, 180, 180, 0.7);
 }
 
 .dark {
-    /* fix contrast on gray cards: check the same above (this is the default) */
-    --vp-c-text-dark-2: rgba(235, 235, 235, 0.6);
-    /* fix lang name: check the same above (this is the default) */
-    --vp-c-text-dark-3: rgba(235, 235, 235, 0.38);
+	/* fix contrast on gray cards: check the same above (this is the default) */
+	--vp-c-text-dark-2: rgba(235, 235, 235, 0.6);
+	/* fix lang name: check the same above (this is the default) */
+	--vp-c-text-dark-3: rgba(235, 235, 235, 0.38);
 }
 
 /**
@@ -28,15 +28,15 @@
    * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-button-brand-border: var(--vp-c-brand-light);
-    --vp-button-brand-text: var(--vp-c-text-dark-1);
-    --vp-button-brand-bg: var(--vp-c-brand);
-    --vp-button-brand-hover-border: var(--vp-c-brand-light);
-    --vp-button-brand-hover-text: var(--vp-c-text-dark-1);
-    --vp-button-brand-hover-bg: var(--vp-c-brand-light);
-    --vp-button-brand-active-border: var(--vp-c-brand-light);
-    --vp-button-brand-active-text: var(--vp-c-text-dark-1);
-    --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+	--vp-button-brand-border: var(--vp-c-brand-light);
+	--vp-button-brand-text: var(--vp-c-text-dark-1);
+	--vp-button-brand-bg: var(--vp-c-brand);
+	--vp-button-brand-hover-border: var(--vp-c-brand-light);
+	--vp-button-brand-hover-text: var(--vp-c-text-dark-1);
+	--vp-button-brand-hover-bg: var(--vp-c-brand-light);
+	--vp-button-brand-active-border: var(--vp-c-brand-light);
+	--vp-button-brand-active-text: var(--vp-c-text-dark-1);
+	--vp-button-brand-active-bg: var(--vp-button-brand-bg);
 }
 
 /**
@@ -44,30 +44,22 @@
    * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(
-        120deg,
-        #8d6fc7 40%,
-        #4fc4d8
-    );
-    --vp-home-hero-image-background-image: linear-gradient(
-        -45deg,
-        #8d73bf90 30%,
-        #d6c0e890
-    );
-    --vp-home-hero-image-filter: blur(30px);
+	--vp-home-hero-name-color: transparent;
+	--vp-home-hero-name-background: -webkit-linear-gradient(120deg, #8d6fc7 40%, #4fc4d8);
+	--vp-home-hero-image-background-image: linear-gradient(-45deg, #8d73bf90 30%, #d6c0e890);
+	--vp-home-hero-image-filter: blur(30px);
 }
 
 @media (min-width: 640px) {
-    :root {
-        --vp-home-hero-image-filter: blur(56px);
-    }
+	:root {
+		--vp-home-hero-image-filter: blur(56px);
+	}
 }
 
 @media (min-width: 960px) {
-    :root {
-        --vp-home-hero-image-filter: blur(72px);
-    }
+	:root {
+		--vp-home-hero-image-filter: blur(72px);
+	}
 }
 
 /**
@@ -75,5 +67,5 @@
    * -------------------------------------------------------------------------- */
 
 .DocSearch {
-    --docsearch-primary-color: var(--vp-c-brand) !important;
+	--docsearch-primary-color: var(--vp-c-brand) !important;
 }

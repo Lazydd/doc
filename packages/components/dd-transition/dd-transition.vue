@@ -1,4 +1,20 @@
+<template>
+	<transition
+		@before-enter="beforeEnter"
+		@enter="enter"
+		@after-enter="afterEnter"
+		@before-leave="beforeLeave"
+		@leave="leave"
+		@after-leave="afterLeave"
+	>
+		<slot />
+	</transition>
+</template>
+
 <script setup lang="ts">
+defineOptions({
+	name: 'ddTransition',
+});
 const elTransition =
 	'0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out';
 const Transition = {
@@ -118,16 +134,3 @@ const afterLeave = (el) => {
 	el.style.paddingBottom = el.dataset.oldPaddingBottom;
 };
 </script>
-
-<template>
-	<transition
-		@before-enter="beforeEnter"
-		@enter="enter"
-		@after-enter="afterEnter"
-		@before-leave="beforeLeave"
-		@leave="leave"
-		@after-leave="afterLeave"
-	>
-		<slot />
-	</transition>
-</template>

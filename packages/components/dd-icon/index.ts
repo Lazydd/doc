@@ -1,5 +1,5 @@
-import { install } from "../../utils";
-import Icon from "./dd-icon.vue";
+import { install } from '../../utils';
+import Icon from './dd-icon.vue';
 
 export const ddIcon = install(Icon);
 export { Icon };

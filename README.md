@@ -17,15 +17,15 @@ npm install ddLazy-ui-plus
 ### Quick Start
 
 ```js
-import { createApp } from "vue";
-import ddlazyUi from "ddlazy-ui-plus";
-import "ddlazy-ui-plus/lib/index.css";
-import App from "./App.vue";
+import { createApp } from 'vue';
+import ddlazyUi from 'ddlazy-ui-plus';
+import 'ddlazy-ui-plus/lib/index.css';
+import App from './App.vue';
 
 const app = createApp(App);
 
 app.use(ddlazyUi);
-app.mount("#app");
+app.mount('#app');
 ```
 
 ## Browser Support

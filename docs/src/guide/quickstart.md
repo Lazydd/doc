@@ -9,97 +9,97 @@
 ### 完整引入
 
 ```js
-import { createApp } from "vue";
-import ddlazyUi from "ddlazy-ui-plus";
-import "ddlazy-ui-plus/lib/index.css";
-import App from "./App.vue";
+import { createApp } from 'vue';
+import ddlazyUi from 'ddlazy-ui-plus';
+import 'ddlazy-ui-plus/lib/index.css';
+import App from './App.vue';
 
 const app = createApp(App);
 
 app.use(ddlazyUi);
-app.mount("#app");
+app.mount('#app');
 ```
 
 ### 按需引入
 
 ```js
-import { createApp } from "vue";
-import "ddlazy-ui-plus/lib/index.css";
-import App from "./App.vue";
+import { createApp } from 'vue';
+import 'ddlazy-ui-plus/lib/index.css';
+import App from './App.vue';
 
 const app = createApp(App);
 import {
-    ddButton,
-    ddIcon,
-    ddLink,
-    ddRow,
-    ddCol,
-    ddTable,
-    ddTableColumn,
-    ddRadio,
-    ddRadioGroup,
-    ddRadioButton,
-    ddCheckbox,
-    ddCheckboxGroup,
-    ddCheckboxButton,
-    ddInput,
-    ddInputNumber,
-    ddNumber,
-    ddSelect,
-    ddOption,
-    ddScroll,
-    ddSwitch,
-    ddSlider,
-    ddTag,
-    ddProgress,
-    ddUpload,
-    ddColorPicker,
-    ddTooltip,
-    ddPagination,
-    ddBadge,
-    ddAvatar,
-    ddTabs,
-    ddTabPane,
-    ddBreadcrumb,
-    ddBreadcrumbItem,
-    ddCard,
-    ddDivider,
-    ddBacktop,
-    ddDialog,
-    ddForm,
-    ddFormItem,
-    ddEmpty,
-    ddTree,
-    ddSkeleton,
-    ddCollapse,
-    ddCollapseItem,
-    ddPopconfirm,
-    ddSteps,
-    ddStep,
-    ddTransfer,
-    ddCarousel,
-    ddCarouselItem,
-    ddTimeline,
-    ddTimelineItem,
-    ddDropdown,
-    ddDropdownMenu,
-    ddDropdownItem,
-    ddTimeSelect,
-    ddTransition,
-    ddTimePicker,
-    ddCascader,
-    ddImage,
-    ddDatePicker,
-    ddMenu,
-    ddEcharts,
-    ddUeditor,
-    ddMap,
-    ddSignature,
-    ddPrint,
-    Message,
-    ddLoading,
-    ddMessageBox,
-} from "ddlazy-ui-plus";
+	ddButton,
+	ddIcon,
+	ddLink,
+	ddRow,
+	ddCol,
+	ddTable,
+	ddTableColumn,
+	ddRadio,
+	ddRadioGroup,
+	ddRadioButton,
+	ddCheckbox,
+	ddCheckboxGroup,
+	ddCheckboxButton,
+	ddInput,
+	ddInputNumber,
+	ddNumber,
+	ddSelect,
+	ddOption,
+	ddScroll,
+	ddSwitch,
+	ddSlider,
+	ddTag,
+	ddProgress,
+	ddUpload,
+	ddColorPicker,
+	ddTooltip,
+	ddPagination,
+	ddBadge,
+	ddAvatar,
+	ddTabs,
+	ddTabPane,
+	ddBreadcrumb,
+	ddBreadcrumbItem,
+	ddCard,
+	ddDivider,
+	ddBacktop,
+	ddDialog,
+	ddForm,
+	ddFormItem,
+	ddEmpty,
+	ddTree,
+	ddSkeleton,
+	ddCollapse,
+	ddCollapseItem,
+	ddPopconfirm,
+	ddSteps,
+	ddStep,
+	ddTransfer,
+	ddCarousel,
+	ddCarouselItem,
+	ddTimeline,
+	ddTimelineItem,
+	ddDropdown,
+	ddDropdownMenu,
+	ddDropdownItem,
+	ddTimeSelect,
+	ddTransition,
+	ddTimePicker,
+	ddCascader,
+	ddImage,
+	ddDatePicker,
+	ddMenu,
+	ddEcharts,
+	ddUeditor,
+	ddMap,
+	ddSignature,
+	ddPrint,
+	Message,
+	ddLoading,
+	ddMessageBox,
+} from 'ddlazy-ui-plus';
 
 app.use(ddButton);
 app.use(ddIcon);
