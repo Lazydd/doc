@@ -7,8 +7,9 @@
 </template>
 
 <script setup lang="ts">
+import { createName } from '../../utils/index';
 defineOptions({
-	name: 'ddIcon',
+	name: createName('icon'),
 });
 const props = defineProps<{
 	icon: string;

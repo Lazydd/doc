@@ -8,8 +8,8 @@
 <template>
 	<div>
 		<div class="mt1">
-			<ddButton>默认按钮</ddButton>
-			<ddButton type="primary">主要按钮</ddButton>
+			<DdButton>默认按钮</DdButton>
+			<dd-button type="primary">主要按钮</dd-button>
 			<ddButton type="success">成功按钮</ddButton>
 			<ddButton type="info">信息按钮</ddButton>
 			<ddButton type="warning">警告按钮</ddButton>

@@ -8,9 +8,10 @@
 	</button>
 </template>
 <script setup lang="ts">
-import ddIcon from '../dd-icon/dd-icon.vue';
+import { createName } from '../../utils/index';
+import ddIcon from '../icon';
 defineOptions({
-	name: 'ddButton',
+	name: createName('button'),
 });
 const props = withDefaults(
 	defineProps<{

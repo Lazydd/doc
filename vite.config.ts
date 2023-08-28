@@ -26,10 +26,12 @@ export default defineConfig({
 			entry: 'packages/components/index.ts', //库打包入口
 			name: 'ddlazy-ui-plus',
 			fileName: (format) => `ddlazy-ui-plus.${format}.js`,
+			formats: ['es', 'umd'],
 		},
 		rollupOptions: {
 			external: ['vue'],
 			output: {
+				exports: 'named',
 				globals: {
 					vue: 'Vue',
 				},

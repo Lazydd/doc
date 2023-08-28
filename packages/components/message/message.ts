@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue';
-import Message from './dd-message.vue';
+import Message from './message.vue';
 // newInstance
 Message.newInstance = (props = {}) => {
 	const container = document.createElement('div');

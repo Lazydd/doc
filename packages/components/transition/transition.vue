@@ -12,8 +12,9 @@
 </template>
 
 <script setup lang="ts">
+import { createName } from '../../utils/index';
 defineOptions({
-	name: 'ddTransition',
+	name: createName('transition'),
 });
 const elTransition =
 	'0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out';

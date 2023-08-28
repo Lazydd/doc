@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { createName } from '../../utils/index';
 import FluentCheckmarkCircle16Filled from './icons/FluentCheckmarkCircle16Filled.vue';
 import FluentDismissCircle16Filled from './icons/FluentDismissCircle16Filled.vue';
 import FluentErrorCircle16Filled from './icons/FluentErrorCircle16Filled.vue';
@@ -28,7 +29,7 @@ export type messageType = {
 	type: string;
 };
 defineOptions({
-	name: 'ddMessage',
+	name: createName('message'),
 });
 let seed = 0;
 function getUuid() {

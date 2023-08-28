@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ddIcon from '../../../../packages/components/dd-icon';
+import ddIcon from '../../../../packages/components/icon';
 import message from '../../../.vitepress/src/message/message';
 import { useClipboard } from '@vueuse/core';
 import iconList from './icon.json';
