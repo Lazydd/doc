@@ -1,5 +1,5 @@
 import { install } from '../../utils';
-import _Message from './message.vue';
+import Message from './message.vue';
 
-export const Message = install(_Message);
-export default Message;
+export const ddMessage = install(Message);
+export default ddMessage;

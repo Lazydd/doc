@@ -35,9 +35,9 @@ export default {
 	vue: {
 		template: {
 			ssr: true,
-			compilerOptions: {
-				isCustomElement: (tag) => tag.startsWith('dd-'),
-			},
+			// compilerOptions: {
+			// 	isCustomElement: (tag) => tag.startsWith('dd-'),
+			// },
 		},
 	},
 	vite: {

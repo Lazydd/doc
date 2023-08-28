@@ -7,15 +7,15 @@
 ```vue
 <template>
 	<div>
-		<ddButton @click="open1">success</ddButton>
-		<ddButton @click="open2">warning</ddButton>
-		<ddButton @click="open3">error</ddButton>
-		<ddButton @click="open4">info</ddButton>
+		<dd-button @click="open1">success</dd-button>
+		<dd-button @click="open2">warning</dd-button>
+		<dd-button @click="open3">error</dd-button>
+		<dd-button @click="open4">info</dd-button>
 	</div>
 </template>
 
 <script setup lang="ts">
-import message from '../../.vitepress/src/message/message.ts';
+import message from '../../.vitepress/src/message/index.ts';
 const open1 = () => {
 	message.success('success');
 };

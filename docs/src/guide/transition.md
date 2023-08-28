@@ -9,7 +9,7 @@ ddlazy-ui 内应用在部分组件的过渡动画，你也可以直接使用。
 ```vue
 <template>
 	<div>
-		<ddButton @click="show = !show">Click Me</ddButton>
+		<dd-button @click="show = !show">Click Me</dd-button>
 		<div style="display: flex; margin-top: 20px; height: 100px">
 			<transition name="dd-fade">
 				<div v-show="show" class="transition-box">.dd-fade</div>
@@ -48,7 +48,7 @@ const show = ref(true);
 ```vue
 <template>
 	<div>
-		<ddButton @click="show = !show">Click Me</ddButton>
+		<dd-button @click="show = !show">Click Me</dd-button>
 		<div class="zoom">
 			<transition name="dd-zoom-center">
 				<div v-show="show" class="transition-box">.dd-zoom-center</div>
@@ -109,15 +109,15 @@ const show = ref(true);
 ```vue
 <template>
 	<div class="fold">
-		<ddButton @click="show = !show">Click Me</ddButton>
+		<dd-button @click="show = !show">Click Me</dd-button>
 		<div style="height: 320px; marginTop:20px">
-			<ddTransition>
+			<dd-transition>
 				<div v-show="show">
 					<div class="transition-box">折叠</div>
 					<div class="transition-box">折叠</div>
 					<div class="transition-box">折叠</div>
 				</div>
-			</ddTransition>
+			</dd-transition>
 		</div>
 	</div>
 </template>

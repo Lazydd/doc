@@ -7,7 +7,7 @@ import 'vitepress-theme-demoblock-fork/dist/theme/styles/index.css';
 import '../style/main.css';
 import '../style/vars.css';
 import '../style/scroll.css';
-// import { Button, Icon } from '@/lib/ddlazy-ui-plus.es';
+// import { ddButton, ddIcon } from '@/lib/ddlazy-ui-plus.es';
 import ddlazyUi from '@/lib/ddlazy-ui-plus.es.js';
 import '@/lib/index.css';
 import IconList from '../../src/guide/icon/icon.vue';
@@ -17,8 +17,8 @@ export default {
 		app.component('Demo', Demo);
 		app.component('IconList', IconList);
 		app.component('DemoBlock', DemoBlock);
-		// app.use(Button);
-		// app.use(Icon);
+		// app.use(ddButton);
+		// app.use(ddIcon);
 		app.use(ddlazyUi);
 	},
 };

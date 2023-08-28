@@ -8,36 +8,36 @@
 <template>
 	<div>
 		<div class="mt1">
-			<DdButton>默认按钮</DdButton>
+			<dd-button>默认按钮</dd-button>
 			<dd-button type="primary">主要按钮</dd-button>
-			<ddButton type="success">成功按钮</ddButton>
-			<ddButton type="info">信息按钮</ddButton>
-			<ddButton type="warning">警告按钮</ddButton>
-			<ddButton type="danger">危险按钮</ddButton>
+			<dd-button type="success">成功按钮</dd-button>
+			<dd-button type="info">信息按钮</dd-button>
+			<dd-button type="warning">警告按钮</dd-button>
+			<dd-button type="danger">危险按钮</dd-button>
 		</div>
 		<div class="mt1">
-			<ddButton plain>默认按钮</ddButton>
-			<ddButton type="primary" plain>主要按钮</ddButton>
-			<ddButton type="success" plain>成功按钮</ddButton>
-			<ddButton type="info" plain>信息按钮</ddButton>
-			<ddButton type="warning" plain>警告按钮</ddButton>
-			<ddButton type="danger" plain>危险按钮</ddButton>
+			<dd-button plain>默认按钮</dd-button>
+			<dd-button type="primary" plain>主要按钮</dd-button>
+			<dd-button type="success" plain>成功按钮</dd-button>
+			<dd-button type="info" plain>信息按钮</dd-button>
+			<dd-button type="warning" plain>警告按钮</dd-button>
+			<dd-button type="danger" plain>危险按钮</dd-button>
 		</div>
 		<div class="mt1">
-			<ddButton round>默认按钮</ddButton>
-			<ddButton type="primary" round>主要按钮</ddButton>
-			<ddButton type="success" round>成功按钮</ddButton>
-			<ddButton type="info" round>信息按钮</ddButton>
-			<ddButton type="warning" round>警告按钮</ddButton>
-			<ddButton type="danger" round>危险按钮</ddButton>
+			<dd-button round>默认按钮</dd-button>
+			<dd-button type="primary" round>主要按钮</dd-button>
+			<dd-button type="success" round>成功按钮</dd-button>
+			<dd-button type="info" round>信息按钮</dd-button>
+			<dd-button type="warning" round>警告按钮</dd-button>
+			<dd-button type="danger" round>危险按钮</dd-button>
 		</div>
 		<div class="mt1">
-			<ddButton icon="eletrical" circle />
-			<ddButton icon="video1" type="primary" circle />
-			<ddButton icon="electronics" type="success" circle />
-			<ddButton icon="email" type="info" circle />
-			<ddButton icon="furniture" type="warning" circle />
-			<ddButton icon="gift1" type="danger" circle />
+			<dd-button icon="eletrical" circle />
+			<dd-button icon="video1" type="primary" circle />
+			<dd-button icon="electronics" type="success" circle />
+			<dd-button icon="email" type="info" circle />
+			<dd-button icon="furniture" type="warning" circle />
+			<dd-button icon="gift1" type="danger" circle />
 		</div>
 	</div>
 </template>
@@ -61,12 +61,12 @@
 ```vue
 <template>
 	<div>
-		<ddButton disabled>默认按钮</ddButton>
-		<ddButton type="primary" disabled>主要按钮</ddButton>
-		<ddButton type="success" disabled>成功按钮</ddButton>
-		<ddButton type="info" disabled>信息按钮</ddButton>
-		<ddButton type="warning" disabled>警告按钮</ddButton>
-		<ddButton type="danger" disabled>危险按钮</ddButton>
+		<dd-button disabled>默认按钮</dd-button>
+		<dd-button type="primary" disabled>主要按钮</dd-button>
+		<dd-button type="success" disabled>成功按钮</dd-button>
+		<dd-button type="info" disabled>信息按钮</dd-button>
+		<dd-button type="warning" disabled>警告按钮</dd-button>
+		<dd-button type="danger" disabled>危险按钮</dd-button>
 	</div>
 </template>
 
@@ -86,15 +86,15 @@
 ```vue
 <template>
 	<div>
-		<ddButton type="primary" icon="auto" />
-		<ddButton type="primary" icon="map" />
-		<ddButton type="primary" icon="account" />
-		<ddButton type="primary" icon="search">搜索</ddButton>
-		<ddButton type="primary">搜索</ddButton>
-		<ddButton type="primary">
+		<dd-button type="primary" icon="auto" />
+		<dd-button type="primary" icon="map" />
+		<dd-button type="primary" icon="account" />
+		<dd-button type="primary" icon="search">搜索</dd-button>
+		<dd-button type="primary">搜索</dd-button>
+		<dd-button type="primary">
 			搜索
-			<ddIcon icon="search" />
-		</ddButton>
+			<dd-icon icon="search" />
+		</dd-button>
 	</div>
 </template>
 
@@ -114,9 +114,9 @@
 ```vue
 <template>
 	<div>
-		<ddButton type="primary" size="large">Large</ddButton>
-		<ddButton type="primary">Default</ddButton>
-		<ddButton type="primary" size="small">Small</ddButton>
+		<dd-button type="primary" size="large">Large</dd-button>
+		<dd-button type="primary">Default</dd-button>
+		<dd-button type="primary" size="small">Small</dd-button>
 	</div>
 </template>
 
@@ -136,7 +136,7 @@
 ```vue
 <template>
 	<div>
-		<ddButton type="primary" loading>加载中</ddButton>
+		<dd-button type="primary" loading>加载中</dd-button>
 	</div>
 </template>
 ```

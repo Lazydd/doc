@@ -7,10 +7,10 @@
 ```vue
 <template>
 	<div style="display: flex; align-items: center">
-		<ddIcon icon="map" />
-		<ddIcon icon="prompt" />
-		<ddIcon icon="shangchuan" />
-		<ddButton type="primary" icon="search">搜索</ddButton>
+		<dd-icon icon="map" />
+		<dd-icon icon="prompt" />
+		<dd-icon icon="shangchuan" />
+		<dd-button type="primary" icon="search">搜索</dd-button>
 	</div>
 </template>
 
