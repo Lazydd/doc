@@ -10,7 +10,7 @@ import '../style/scroll.css';
 // import { ddButton, ddIcon } from '@/lib/ddlazy-ui-plus.es';
 import ddlazyUi from '@/lib/ddlazy-ui-plus.es.js';
 import '@/lib/index.css';
-import IconList from '../../src/guide/icon/icon.vue';
+import IconList from '../../src/basic/icon/icon.vue';
 export default {
 	...DefaultTheme,
 	enhanceApp: ({ app }) => {

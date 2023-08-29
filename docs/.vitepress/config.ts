@@ -58,11 +58,6 @@ export default {
 			lang: 'en',
 			link: '/en/',
 		},
-		fr: {
-			label: 'French',
-			lang: 'fr',
-			link: '/fr/',
-		},
 	},
 	themeConfig: {
 		smoothScroll: true,
@@ -77,9 +72,7 @@ export default {
 				activeMatch: '^/guide/',
 			},
 		],
-		sidebar: {
-			'/guide/': getGuide(),
-		},
+		sidebar: getGuide(),
 		search: {
 			provider: 'local',
 		},
@@ -93,7 +86,7 @@ export default {
 function getGuide() {
 	return [
 		{
-			text: '指南',
+			text: 'Guide',
 			// collapsed: false,
 			items: [
 				{
@@ -115,11 +108,11 @@ function getGuide() {
 			items: [
 				{
 					text: 'Icon 图标',
-					link: '/guide/icon',
+					link: '/basic/icon',
 				},
 				{
 					text: 'Button 按钮',
-					link: '/guide/button',
+					link: '/basic/button',
 				},
 			],
 		},
@@ -128,7 +121,7 @@ function getGuide() {
 			items: [
 				{
 					text: 'Message 消息提示',
-					link: '/guide/message',
+					link: '/notice/message',
 				},
 			],
 		},
