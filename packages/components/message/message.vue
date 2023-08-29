@@ -5,7 +5,7 @@
 				<div
 					:class="[
 						'demoblock-message',
-						item.type ? `demoblock-message--${item.type}` : '',
+						{ [`demoblock-message--${item.type}`]: item.type },
 					]"
 				>
 					<component :is="components[item.type]" class="demoblock-message-icon" />
@@ -101,7 +101,7 @@ z-index: 1000;*/
 }
 
 .demoblock-messages {
-	--demoblock-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+	--demoblock-bezier: cubic-bezier(0.4, 0.4, 0.4, 0.4);
 	--demoblock-icon-color-info: #2080f0;
 	--demoblock-icon-color-success: #18a058;
 	--demoblock-icon-color-warning: #f0a020;
@@ -201,13 +201,14 @@ html.dark .demoblock-messages {
 
 .demoblock-fade-transition-leave-from,
 .demoblock-fade-transition-enter-to {
-	transform: scale(1);
+	/* transform: scale(1); */
 	opacity: 1;
 }
 
 .demoblock-fade-transition-leave-to,
 .demoblock-fade-transition-enter-from {
-	transform: scale(0.85);
+	transform: translateY(-100%);
+	/* transform: scale(0.85); */
 	opacity: 0;
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;

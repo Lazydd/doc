@@ -1,9 +1,3 @@
-<template>
-	<div class="tooltip_main" @mouseenter="mouseenter" @mouseleave="mouseleave">
-		<slot v-if="$slots.default" />
-	</div>
-</template>
-
 <script setup lang="ts">
 import { ref, getCurrentInstance } from 'vue';
 const props = withDefaults(
@@ -109,7 +103,13 @@ const initNode = () => {
 };
 </script>
 
-<style lang="less">
+<template>
+	<div class="tooltip_main" @mouseenter="mouseenter" @mouseleave="mouseleave">
+		<slot v-if="$slots.default" />
+	</div>
+</template>
+
+<style lang="less" scoped>
 @keyframes tooltip {
 	0% {
 		opacity: 0;

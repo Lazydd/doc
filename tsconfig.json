@@ -1,21 +1,29 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "target": "esnext",
-      "module": "esnext",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "resolveJsonModule": true,
-      "allowJs": true,
-      "strict": false,
-      "jsx": "preserve",
-      "types": ["vite/client"],
-      "baseUrl": ".",
-      "paths": {
-        "@theme/*": [".vitepress/theme/*"]
-      }
-    },
-    "include": ["env.d.ts", "src/**/*", ".vitepress/**/*",".vitepress/theme/*","docs/**/*","packages/**/*", "docs/.vitepress/theme/icon.vue.ts"],
-    "exclude": ["node_modules/**/*"],
-  }
-  
+	"compilerOptions": {
+		"outDir": "dist",
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"strict": false,
+		"jsx": "preserve",
+		"types": ["vite/client"],
+		"baseUrl": ".",
+		"paths": {
+			"@theme/*": [".vitepress/theme/*"],
+			"@/lib/*": ["lib/*"]
+		}
+	},
+	"include": [
+		"env.d.ts",
+		"src/**/*",
+		".vitepress/**/*",
+		".vitepress/theme/*",
+		"docs/**/*",
+		"packages/**/*",
+		"docs/.vitepress/theme/*"
+	],
+	"exclude": ["node_modules/**/*"]
+}

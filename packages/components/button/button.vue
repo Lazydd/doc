@@ -1,12 +1,13 @@
 <template>
 	<button :class="['dd-button', type, size, { plain, round, circle, disabled, loading }]">
-		<ddIcon v-if="loading" icon="loading" class="loading" />
-		<ddIcon v-if="icon" :icon="icon" />
+		<dd-icon v-if="loading" icon="loading" class="loading" />
+		<dd-icon v-if="icon" :icon="icon" />
 		<span :class="{ ml5: icon || loading }" v-if="$slots.default">
 			<slot />
 		</span>
 	</button>
 </template>
+
 <script setup lang="ts">
 import { createName } from '../../utils/index';
 import ddIcon from '../icon';

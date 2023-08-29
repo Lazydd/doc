@@ -15,18 +15,18 @@
 </template>
 
 <script setup lang="ts">
-import message from '../../.vitepress/src/message/index.ts';
+import { ddMessage } from '@/lib/ddlazy-ui-plus.es.js';
 const open1 = () => {
-	message.success('success');
+	ddMessage.success('success');
 };
 const open2 = () => {
-	message('warning', { type: 'warning' });
+	ddMessage('warning', { type: 'warning' });
 };
 const open3 = () => {
-	message.error('error');
+	ddMessage.error('error');
 };
 const open4 = () => {
-	message('info');
+	ddMessage('info');
 };
 </script>
 
