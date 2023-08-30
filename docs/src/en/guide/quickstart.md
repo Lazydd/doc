@@ -1,12 +1,12 @@
-# 快速上手
+# Quick Start
 
-本节将介绍如何在项目中使用 ddlazy-ui-plus
+This section describes how to use ddlazy-ui-plus in your project.
 
-## 引入 ddlazy-ui
+## Import ddlazy-ui
 
-如果你对打包后的文件大小不是很在乎，那么使用完整导入会更方便。
+If you don’t care about the bundle size so much, it’s more convenient to use full import.
 
-### 完整引入
+### Full Import
 
 ```js
 import { createApp } from 'vue';
@@ -20,7 +20,7 @@ app.use(ddlazyUi);
 app.mount('#app');
 ```
 
-### 按需引入
+### Auto import
 
 ```vue
 <template>

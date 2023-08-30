@@ -1,9 +1,11 @@
 import { headerPlugin } from './plugin/headerMdPlugin';
 import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock-fork';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+
+import { en, root, enSearch, zhSearch, zhDemoBlock, enDemoBlock } from './languages';
+
 export default {
 	title: 'ddlazy-ui',
-	description: 'A Component Library for Vue.js.',
 	head: [
 		[
 			'script',
@@ -47,34 +49,43 @@ export default {
 				'@': process.cwd(),
 			},
 		},
+		server: {
+			host: true,
+		},
+		build: {
+			minify: 'terser',
+			chunkSizeWarningLimit: Infinity,
+		},
+		json: {
+			stringify: true,
+		},
 	},
 	locales: {
-		root: {
-			label: '简体中文',
-			lang: 'Zh_CN',
-		},
-		en: {
-			label: 'English',
-			lang: 'en',
-			link: '/en/',
-		},
+		...root,
+		...en,
 	},
 	themeConfig: {
-		smoothScroll: true,
-		outlineTitle: '本页目录',
-		lastUpdatedText: '上次更新',
+		// smoothScroll: true,
+		i18nRouting: true,
 		logo: '/logo.svg',
 		socialLinks: [{ icon: 'github', link: 'https://github.com/Lazydd' }],
-		nav: [
-			{
-				text: '🍉😉组件',
-				link: '/guide/installation',
-				activeMatch: '^/guide/',
-			},
-		],
-		sidebar: getGuide(),
 		search: {
 			provider: 'local',
+			options: {
+				locales: {
+					...enSearch,
+					...zhSearch,
+				},
+			},
+		},
+		// algolia: {
+		// 	indexName: 'ddlazy-ui-plus',
+		// 	appId: '',
+		// 	apiKey: '',
+		// },
+		demoblock: {
+			...zhDemoBlock,
+			...enDemoBlock,
 		},
 		footer: {
 			message: 'Released under the MIT License.',
@@ -82,48 +93,3 @@ export default {
 		},
 	},
 };
-
-function getGuide() {
-	return [
-		{
-			text: 'Guide',
-			// collapsed: false,
-			items: [
-				{
-					text: '安装',
-					link: '/guide/installation',
-				},
-				{
-					text: '快速上手',
-					link: '/guide/quickstart',
-				},
-				{
-					text: '内置过渡动画',
-					link: '/guide/transition',
-				},
-			],
-		},
-		{
-			text: 'Basic',
-			items: [
-				{
-					text: 'Icon 图标',
-					link: '/basic/icon',
-				},
-				{
-					text: 'Button 按钮',
-					link: '/basic/button',
-				},
-			],
-		},
-		{
-			text: 'Notice',
-			items: [
-				{
-					text: 'Message 消息提示',
-					link: '/notice/message',
-				},
-			],
-		},
-	];
-}
