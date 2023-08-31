@@ -5,7 +5,8 @@ const modulesFiles = import.meta.glob('./**/index.ts', { import: 'default', eage
 
 export * from './button';
 export * from './icon';
-export * from './message'
+export * from './message';
+export * from './transition';
 
 export default {
 	install(app: App) {

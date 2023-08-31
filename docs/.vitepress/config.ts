@@ -21,9 +21,9 @@ export default {
 			},
 		],
 	],
-	outDir: '../dist',
+	outDir: '../dist/docs',
 	srcDir: 'src',
-	// base: process.env.NODE_ENV === "production" ? "/ddlazy-ui/" : "/",
+	base: process.env.NODE_ENV === "production" ? "/docs/" : "/",
 	cleanUrls: true,
 	markdown: {
 		// lineNumbers: true,//行号
