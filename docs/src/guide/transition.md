@@ -4,6 +4,8 @@ ddlazy-ui-plus 内应用在部分组件的过渡动画，你也可以直接使�
 
 ## fade 淡入淡出
 
+`dd-fade`.
+
 :::demo
 
 ```vue
@@ -42,6 +44,8 @@ const show = ref(true);
 :::
 
 ## zoom 缩放
+
+`dd-zoom-center`, `dd-zoom-left`, `dd-zoom-right`, `dd-zoom-centerVertical`, `dd-zoom-top` 和 `dd-zoom-bottom` 六种效果.
 
 :::demo
 
@@ -103,6 +107,8 @@ const show = ref(true);
 :::
 
 ## collapse 展开折叠
+
+使用 `dd-transition` 组件实现折叠展开效果。
 
 :::demo
 

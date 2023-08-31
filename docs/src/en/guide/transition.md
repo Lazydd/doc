@@ -4,6 +4,8 @@ You can use ddlazy-ui-plus built-in transitions directly.
 
 ## Fade
 
+`dd-fade`.
+
 :::demo
 
 ```vue
@@ -42,6 +44,8 @@ const show = ref(true);
 :::
 
 ## Zoom
+
+`dd-zoom-center`, `dd-zoom-left`, `dd-zoom-right`, `dd-zoom-centerVertical`, `dd-zoom-top` and `dd-zoom-bottom` are provided.
 
 :::demo
 
@@ -103,6 +107,8 @@ const show = ref(true);
 :::
 
 ## Collapse
+
+For collapse effect, use the `dd-transition` component.
 
 :::demo
 

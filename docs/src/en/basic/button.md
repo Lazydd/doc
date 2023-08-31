@@ -2,6 +2,8 @@
 
 ## Basic usage
 
+Use `type`, `plain`, `round` and `circle` to define Button's style.
+
 :::demo
 
 ```vue
@@ -56,6 +58,8 @@
 
 ## Disabled Button
 
+The `disabled` attribute determines if the button is disabled.
+
 :::demo
 
 ```vue
@@ -80,6 +84,8 @@
 :::
 
 ## Icon Button
+
+Use the `icon` attribute to add icon.
 
 :::demo
 
@@ -109,6 +115,8 @@
 
 ## Sizes
 
+Use attribute `size` to set additional sizes with `large`, `small`.
+
 :::demo
 
 ```vue
@@ -130,6 +138,8 @@
 :::
 
 ## Loading Button
+
+Set `loading` attribute to `true` to display loading state.
 
 :::demo
 

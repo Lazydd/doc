@@ -4,7 +4,7 @@ This section describes how to use ddlazy-ui-plus in your project.
 
 ## Import ddlazy-ui-plus
 
-If you don’t care about the bundle size so much, it’s more convenient to use full import.
+If you don't care about the bundle size so much, it's more convenient to use full import.
 
 ### Full Import
 

@@ -2,6 +2,8 @@
 
 ## Basic usage
 
+setting value of `type` can define different types, and its default is `info`
+
 :::demo
 
 ```vue
