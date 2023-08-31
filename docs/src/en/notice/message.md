@@ -38,3 +38,15 @@ const open4 = () => {
 }
 </style>
 ```
+
+:::
+
+## API
+
+### Options
+
+| Name     | Description                                                                    | Type                                          | Default | Version |
+| -------- | ------------------------------------------------------------------------------ | --------------------------------------------- | ------- | ------- |
+| message  | message text                                                                   | `string`                                      | ''      |
+| type     | message type                                                                   | `'success' \| 'warning' \| 'info' \| 'error'` | info    |
+| duration | display duration, millisecond. If set to 0, it will not turn off automatically | `number`                                      | 3000    |

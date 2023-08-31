@@ -137,6 +137,33 @@
 
 :::
 
+## 链接按钮
+
+通过设置 `link` 属性为 `true` 来显示链接按钮。
+
+:::demo
+
+```vue
+<template>
+	<div>
+		<dd-button link>default</dd-button>
+		<dd-button type="primary" link>primary</dd-button>
+		<dd-button type="success" link>success</dd-button>
+		<dd-button type="info" link>info</dd-button>
+		<dd-button type="warning" link>warning</dd-button>
+		<dd-button type="danger" link>danger</dd-button>
+	</div>
+</template>
+
+<style lang="less" scoped>
+.dd-button + .dd-button {
+	margin-left: 12px;
+}
+</style>
+```
+
+:::
+
 ## 加载中
 
 通过设置 `loading` 属性为 `true` 来显示加载中状态。
@@ -152,3 +179,19 @@
 ```
 
 :::
+
+## Button API
+
+### Button Attributes
+
+| Name     | Description | Type                                                    | Default | Version |
+| -------- | ----------- | ------------------------------------------------------- | ------- | ------- |
+| size     | 尺寸        | `'large'\| 'default'\| 'small'`                         | —       |
+| type     | 类型        | `'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | —       |
+| plain    | 朴素按钮    | `boolean`                                               | false   |
+| link     | 链接按钮    | `boolean`                                               | false   | 2.2.1   |
+| round    | 圆角按钮    | `boolean`                                               | false   |
+| circle   | 圆形按钮    | `boolean`                                               | false   |
+| loading  | 加载中      | `boolean`                                               | false   |
+| disabled | 禁用        | `boolean`                                               | false   |
+| icon     | 图标组件    | `string` / `Component`                                  | —       |

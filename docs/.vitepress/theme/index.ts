@@ -13,7 +13,9 @@ import '@/lib/index.css';
 import IconList from '../../src/basic/icon/icon.vue';
 export default {
 	...DefaultTheme,
-	enhanceApp: ({ app }) => {
+	enhanceApp: (ctx) => {
+		const { app } = ctx;
+		DefaultTheme.enhanceApp(ctx);
 		app.component('Demo', Demo);
 		app.component('IconList', IconList);
 		app.component('DemoBlock', DemoBlock);

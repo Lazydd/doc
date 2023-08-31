@@ -1,5 +1,5 @@
 <template>
-	<button :class="['dd-button', type, size, { plain, round, circle, disabled, loading }]">
+	<button :class="['dd-button', type, size, { plain, round, circle, disabled, loading, link }]">
 		<dd-icon v-if="loading" icon="loading" class="loading" />
 		<dd-icon v-if="icon" :icon="icon" />
 		<span :class="{ ml5: icon || loading }" v-if="$slots.default">
@@ -24,14 +24,17 @@ const props = withDefaults(
 		plain?: boolean;
 		loading?: boolean;
 		icon?: string;
+		link?: boolean;
 	}>(),
 	{
 		type: '',
 		size: 'default',
 		circle: false,
 		disabled: false,
+		round: false,
 		plain: false,
 		loading: false,
+		link: false,
 	}
 );
 </script>
@@ -106,7 +109,17 @@ const props = withDefaults(
 		background-color: #fff !important;
 		border-color: #ebeef5 !important;
 	}
-
+	&.link {
+		color: #606266;
+		border: transparent !important;
+		background-color: transparent !important;
+		padding: 2px;
+		height: auto;
+		&:hover,
+		&:focus {
+			color: #909399;
+		}
+	}
 	> span {
 		display: flex;
 		align-items: center;
@@ -144,6 +157,15 @@ const props = withDefaults(
 		background-color: #a0cfff !important;
 		border-color: #a0cfff !important;
 	}
+	&.link {
+		color: #409eff;
+		border: transparent !important;
+		background-color: transparent !important;
+		&:hover,
+		&:focus {
+			color: #a0cfff;
+		}
+	}
 }
 .success {
 	color: #fff;
@@ -175,6 +197,15 @@ const props = withDefaults(
 	&.loading {
 		background-color: #b3e19d !important;
 		border-color: #b3e19d !important;
+	}
+	&.link {
+		color: #67c23a;
+		border: transparent !important;
+		background-color: transparent !important;
+		&:hover,
+		&:focus {
+			color: #b3e19d;
+		}
 	}
 }
 .info {
@@ -208,6 +239,15 @@ const props = withDefaults(
 		background-color: #c8c9cc !important;
 		border-color: #c8c9cc !important;
 	}
+	&.link {
+		color: #909399;
+		border: transparent !important;
+		background-color: transparent !important;
+		&:hover,
+		&:focus {
+			color: #c8c9cc;
+		}
+	}
 }
 .warning {
 	color: #fff;
@@ -240,6 +280,15 @@ const props = withDefaults(
 		background-color: #f3d19e !important;
 		border-color: #f3d19e !important;
 	}
+	&.link {
+		color: #e6a23c;
+		border: transparent !important;
+		background-color: transparent !important;
+		&:hover,
+		&:focus {
+			color: #f3d19e;
+		}
+	}
 }
 .danger {
 	color: #fff;
@@ -271,6 +320,15 @@ const props = withDefaults(
 	&.loading {
 		background-color: #fab6b6 !important;
 		border-color: #fab6b6 !important;
+	}
+	&.link {
+		color: #f56c6c;
+		border: transparent !important;
+		background-color: transparent !important;
+		&:hover,
+		&:focus {
+			color: #fab6b6;
+		}
 	}
 }
 

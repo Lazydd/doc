@@ -23,7 +23,7 @@ export default {
 	],
 	outDir: '../dist/docs',
 	srcDir: 'src',
-	base: process.env.NODE_ENV === "production" ? "/docs/" : "/",
+	base: process.env.NODE_ENV === 'production' ? '/docs/' : '/',
 	cleanUrls: true,
 	markdown: {
 		// lineNumbers: true,//行号

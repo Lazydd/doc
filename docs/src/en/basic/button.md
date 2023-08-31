@@ -137,6 +137,33 @@ Use attribute `size` to set additional sizes with `large`, `small`.
 
 :::
 
+## 链接按钮
+
+Set `link` attribute to `true` to display link state.
+
+:::demo
+
+```vue
+<template>
+	<div>
+		<dd-button link>default</dd-button>
+		<dd-button type="primary" link>primary</dd-button>
+		<dd-button type="success" link>success</dd-button>
+		<dd-button type="info" link>info</dd-button>
+		<dd-button type="warning" link>warning</dd-button>
+		<dd-button type="danger" link>danger</dd-button>
+	</div>
+</template>
+
+<style lang="less" scoped>
+.dd-button + .dd-button {
+	margin-left: 12px;
+}
+</style>
+```
+
+:::
+
 ## Loading Button
 
 Set `loading` attribute to `true` to display loading state.
@@ -152,3 +179,19 @@ Set `loading` attribute to `true` to display loading state.
 ```
 
 :::
+
+## Button API
+
+### Button Attributes
+
+| Name     | Description | Type                                                    | Default | version |
+| -------- | ----------- | ------------------------------------------------------- | ------- | ------- |
+| size     | size        | `'large'\| 'default'\| 'small'`                         | —       |
+| type     | type        | `'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | —       |
+| plain    | plain       | `boolean`                                               | false   |
+| link     | link        | `boolean`                                               | false   | 2.2.1   |
+| round    | round       | `boolean`                                               | false   |
+| circle   | circle      | `boolean`                                               | false   |
+| loading  | loading     | `boolean`                                               | false   |
+| disabled | disabled    | `boolean`                                               | false   |
+| icon     | icon        | `string` / `Component`                                  | —       |
