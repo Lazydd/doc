@@ -137,7 +137,7 @@ Use attribute `size` to set additional sizes with `large`, `small`.
 
 :::
 
-## 链接按钮
+## Link
 
 Set `link` attribute to `true` to display link state.
 
