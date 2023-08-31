@@ -2,7 +2,7 @@
 
 本节将介绍如何在项目中使用 ddlazy-ui-plus
 
-## 引入 ddlazy-ui
+## 引入 ddlazy-ui-plus
 
 如果你对打包后的文件大小不是很在乎，那么使用完整导入会更方便。
 

@@ -5,7 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import { en, root, enSearch, zhSearch, zhDemoBlock, enDemoBlock } from './languages';
 
 export default {
-	title: 'ddlazy-ui',
+	title: 'ddlazy-ui-plus',
 	head: [
 		[
 			'script',

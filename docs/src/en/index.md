@@ -1,22 +1,22 @@
 ---
 layout: home
 
-title: ddlazy-ui
+title: ddlazy-ui-plus
 editLink: true
 lastUpdated: true
 hero:
-    name: ddlazy-ui
+    name: ddlazy-ui-plus
     text: Vue3 Basic Components
     image:
         src: /img/logo.jpg
-        alt: ddlazy-ui
+        alt: ddlazy-ui-plus
     actions:
         - theme: brand
           text: Get Started
           link: /guide/installation
         - theme: alt
           text: GitHub
-          link: https://github.com/Lazydd/ddlazy-ui
+          link: https://github.com/Lazydd/ddlazy-ui-plus
 features:
     - icon: 🪒
       title: Actual Project
