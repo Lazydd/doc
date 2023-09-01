@@ -13,7 +13,9 @@
 		"baseUrl": ".",
 		"paths": {
 			"@theme/*": [".vitepress/theme/*"],
-			"@/lib/*": ["lib/*"]
+			"@/lib/*": ["lib/*"],
+			"@/packages/*": ["packages/*"],
+			"@/docs/*": ["docs/*"]
 		}
 	},
 	"include": [
