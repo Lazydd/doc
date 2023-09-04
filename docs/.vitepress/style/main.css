@@ -195,6 +195,11 @@
 	left: 0 !important;
 }
 
+.outline-link:hover,
+.outline-link.active {
+	color: var(--vp-c-brand-1) !important;
+}
+
 @media (min-width: 1280px) {
 	.aside {
 		display: block !important;

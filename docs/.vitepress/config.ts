@@ -65,7 +65,6 @@ export default {
 		...en,
 	},
 	themeConfig: {
-		// smoothScroll: true,
 		i18nRouting: true,
 		logo: '/logo.svg',
 		socialLinks: [{ icon: 'github', link: 'https://github.com/Lazydd' }],
