@@ -13,18 +13,26 @@ export default {
 				src: 'https://at.alicdn.com/t/font_3116237_st7bhqgkyyc.js',
 			},
 		],
-		[
-			'link',
-			{
-				href: 'https://cdn.ddlazy.cn/map/main.css',
-				rel: 'stylesheet',
-			},
-		],
+		// [
+		// 	'link',
+		// 	{
+		// 		href: 'https://cdn.ddlazy.cn/map/main.css',
+		// 		rel: 'stylesheet',
+		// 	},
+		// ],
 	],
 	outDir: '../dist/docs',
 	srcDir: 'src',
 	base: process.env.NODE_ENV === 'production' ? '/docs/' : '/',
+	lastUpdated: true,
 	cleanUrls: true,
+	ignoreDeadLinks: true,
+	sitemap: {
+		hostname: 'https://ddlazy.cn',
+		transformItems(items) {
+			return items.filter((item) => !item.url.includes('migration'));
+		},
+	},
 	markdown: {
 		// lineNumbers: true,//行号
 		config(md) {

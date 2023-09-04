@@ -6,7 +6,6 @@ export const config = {
 		lang: 'en',
 		link: '/en/',
 		description: 'A Component Library for Vue.js.',
-		lastUpdatedText: 'lastUpdated',
 		themeConfig: {
 			nav: [
 				{
@@ -17,6 +16,13 @@ export const config = {
 			],
 			sidebar: {
 				'/en/': getGuide(),
+			},
+			editLink: {
+				pattern: 'https://github.com/Lazydd',
+				text: 'Edit this page on GitHub',
+			},
+			lastUpdated: {
+				text: 'LastUpdated',
 			},
 			outline: {
 				label: 'On this page',

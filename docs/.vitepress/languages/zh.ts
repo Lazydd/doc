@@ -5,7 +5,6 @@ export const config = {
 		label: '简体中文',
 		lang: 'Zh_CN',
 		description: '一个基于Vue的组件库',
-		lastUpdatedText: '上次更新',
 		themeConfig: {
 			nav: [
 				{
@@ -15,6 +14,13 @@ export const config = {
 				},
 			],
 			sidebar: getGuide(),
+			editLink: {
+				pattern: 'https://github.com/Lazydd',
+				text: '在GitHub上编辑',
+			},
+			lastUpdated: {
+				text: '上次更新',
+			},
 			outline: {
 				label: '本页目录',
 				level: 'deep',
