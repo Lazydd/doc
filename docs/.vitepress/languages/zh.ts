@@ -15,7 +15,7 @@ export const config = {
 			],
 			sidebar: getGuide(),
 			editLink: {
-				pattern: 'https://github.com/Lazydd',
+				pattern: 'https://github.com/Lazydd/doc/edit/main/docs/src/:path',
 				text: '在GitHub上编辑',
 			},
 			lastUpdated: {

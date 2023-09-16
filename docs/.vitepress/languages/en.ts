@@ -18,7 +18,7 @@ export const config = {
 				'/en/': getGuide(),
 			},
 			editLink: {
-				pattern: 'https://github.com/Lazydd',
+				pattern: 'https://github.com/Lazydd/doc/edit/main/docs/src/:path',
 				text: 'Edit this page on GitHub',
 			},
 			lastUpdated: {
