@@ -6,7 +6,6 @@
 	--vp-c-white: #ffffff;
 	--vp-c-black: #000000;
 	/* --vp-c-brand被移除了使用--vp-c-brand-1替代 */
-	--vp-c-brand: #0086c9;
 	--vp-c-brand-1: #0086c9;
 	--vp-c-brand-2: #0086c9;
 	/* fix contrast on gray cards: used by --vp-c-text-2 */

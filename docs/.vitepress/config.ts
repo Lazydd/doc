@@ -7,7 +7,7 @@ import { en, root, enSearch, zhSearch, zhDemoBlock, enDemoBlock } from './langua
 
 const RSS: RSSOptions = {
 	title: 'docs',
-	baseUrl: 'https://lazydd.github.io/lazy-blog/',
+	baseUrl: 'https://lazydd.github.io',
 	description: '博客模板',
 	language: 'zh-cn',
 	copyright: 'Copyright © 2023-present ddlazy',
