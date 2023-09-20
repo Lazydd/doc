@@ -195,11 +195,6 @@
 	left: 0 !important;
 }
 
-.outline-link:hover,
-.outline-link.active {
-	color: var(--vp-c-brand-1) !important;
-}
-
 @media (min-width: 1280px) {
 	.aside {
 		display: block !important;
@@ -212,3 +207,21 @@
 		display: none !important;
 	}
 }
+
+:not(.NotFound *):not(.VPFooter *) {
+	text-align: justify;
+}
+
+.NotFound {
+	text-align: center !important;
+}
+
+/* 灰度模式 */
+/* html {
+	filter: grayscale(95%);
+	-webkit-filter: grayscale(95%);
+	-moz-filter: grayscale(95%);
+	-ms-filter: grayscale(95%);
+	-o-filter: grayscale(95%);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=.95);
+} */
