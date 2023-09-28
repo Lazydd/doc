@@ -1,6 +1,7 @@
 import { headerPlugin } from './plugin/headerMdPlugin';
 import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock-fork';
 import { RssPlugin, RSSOptions } from 'vitepress-plugin-rss';
+import algoliaSearchOptions from './search/algolia';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import { en, root, enSearch, zhSearch, zhDemoBlock, enDemoBlock } from './languages';
@@ -22,13 +23,6 @@ export default {
 				src: 'https://at.alicdn.com/t/font_3116237_st7bhqgkyyc.js',
 			},
 		],
-		// [
-		// 	'link',
-		// 	{
-		// 		href: 'https://cdn.ddlazy.cn/map/main.css',
-		// 		rel: 'stylesheet',
-		// 	},
-		// ],
 	],
 	outDir: '../dist/docs',
 	srcDir: 'src',
@@ -94,12 +88,9 @@ export default {
 					...zhSearch,
 				},
 			},
+			// provider: 'algolia',
+			// options: algoliaSearchOptions,
 		},
-		// algolia: {
-		// 	indexName: 'ddlazy-ui-plus',
-		// 	appId: '',
-		// 	apiKey: '',
-		// },
 		demoblock: {
 			...zhDemoBlock,
 			...enDemoBlock,

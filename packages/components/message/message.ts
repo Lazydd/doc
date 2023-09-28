@@ -1,5 +1,6 @@
 import { createApp, h } from 'vue';
 import Message from './message.vue';
+import { MessageProps } from './types';
 // newInstance
 Message.newInstance = (props = {}) => {
 	const container = document.createElement('div');
@@ -18,7 +19,7 @@ Message.newInstance = (props = {}) => {
 	document.body.appendChild(container.firstElementChild);
 
 	return {
-		add(messageProps: any) {
+		add(messageProps: MessageProps) {
 			messageRef.add(messageProps);
 		},
 		remove(name: string) {

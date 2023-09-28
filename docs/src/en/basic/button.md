@@ -186,10 +186,10 @@ Set `loading` attribute to `true` to display loading state.
 
 | Name     | Description | Type                                                    | Default | version |
 | -------- | ----------- | ------------------------------------------------------- | ------- | ------- |
-| size     | size        | `'large'\| 'default'\| 'small'`                         | —       |
+| size     | size        | `'large'\| 'small'`                                     | —       |
 | type     | type        | `'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | —       |
 | plain    | plain       | `boolean`                                               | false   |
-| link     | link        | `boolean`                                               | false   | 2.2.1   |
+| link     | link        | `boolean`                                               | false   |         |
 | round    | round       | `boolean`                                               | false   |
 | circle   | circle      | `boolean`                                               | false   |
 | loading  | loading     | `boolean`                                               | false   |
