@@ -1,7 +1,7 @@
 export const algoliaSearchOptions = {
 	appId: '',
 	apiKey: '',
-	indexName: 'lazy',
+	indexName: '',
 	locales: {
 		root: {
 			placeholder: '搜索文档',

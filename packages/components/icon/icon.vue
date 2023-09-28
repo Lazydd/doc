@@ -8,13 +8,11 @@
 
 <script setup lang="ts">
 import { createName } from '../../utils/index';
+import { iconProps } from './types';
 defineOptions({
 	name: createName('icon'),
 });
-const props = defineProps<{
-	icon: string;
-	color?: string;
-}>();
+defineProps(iconProps);
 </script>
 
 <style lang="less" scoped>
@@ -35,3 +33,4 @@ const props = defineProps<{
 	}
 }
 </style>
+./types
