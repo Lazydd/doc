@@ -8,7 +8,7 @@ hero:
     name: ddlazy-ui-plus
     text: vue3基础组件
     image:
-        src: /img/logo.jpg
+        src: /logo.gif
         alt: ddlazy-ui-plus
     actions:
         - theme: brand
