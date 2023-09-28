@@ -87,32 +87,6 @@ function getGuide(): DefaultTheme.SidebarItem[] {
 					text: 'Quickstart',
 					link: '/en/guide/quickstart',
 				},
-				{
-					text: 'Transition',
-					link: '/en/guide/transition',
-				},
-			],
-		},
-		{
-			text: 'Basic',
-			items: [
-				{
-					text: 'Icon',
-					link: '/en/basic/icon',
-				},
-				{
-					text: 'Button',
-					link: '/en/basic/button',
-				},
-			],
-		},
-		{
-			text: 'Notice',
-			items: [
-				{
-					text: 'Message',
-					link: '/en/notice/message',
-				},
 			],
 		},
 	];

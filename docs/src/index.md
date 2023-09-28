@@ -1,15 +1,15 @@
 ---
 layout: home
 
-title: ddlazy-ui-plus
+title: lazy-blog
 editLink: true
 lastUpdated: true
 hero:
-    name: ddlazy-ui-plus
-    text: vue3基础组件
+    name: lazy-blog
+    text: 博客
     image:
-        src: /img/logo.jpg
-        alt: ddlazy-ui-plus
+        src: logo.gif
+        alt: lazy-blog
     actions:
         - theme: brand
           text: 开始

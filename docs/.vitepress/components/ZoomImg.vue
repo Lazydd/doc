@@ -22,7 +22,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<img ref="imgRef" :src="withBase(src)" />
+	<img ref="imgRef" :src="withBase(src)" :alt="withBase(src)" :title="withBase(src)" />
 </template>
 
 <style>

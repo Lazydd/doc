@@ -84,32 +84,6 @@ function getGuide(): DefaultTheme.SidebarItem[] {
 					text: '快速上手',
 					link: '/guide/quickstart',
 				},
-				{
-					text: '内置过渡动画',
-					link: '/guide/transition',
-				},
-			],
-		},
-		{
-			text: 'Basic',
-			items: [
-				{
-					text: 'Icon 图标',
-					link: '/basic/icon',
-				},
-				{
-					text: 'Button 按钮',
-					link: '/basic/button',
-				},
-			],
-		},
-		{
-			text: 'Notice',
-			items: [
-				{
-					text: 'Message 消息提示',
-					link: '/notice/message',
-				},
 			],
 		},
 	];

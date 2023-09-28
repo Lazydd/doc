@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Theme from 'vitepress/theme';
+import BlogComment from './BlogComment.vue';
+import BlogArticleAnalyze from './BlogArticleAnalyze.vue';
+
 defineOptions({ name: 'BlogApp' });
 
 const { Layout } = Theme;
@@ -10,11 +13,15 @@ const { Layout } = Theme;
 		<template #layout-top></template>
 		<template #doc-before>
 			<slot name="doc-before" />
+			<ClientOnly>
+				<BlogArticleAnalyze />
+			</ClientOnly>
 		</template>
 
 		<!-- 评论 -->
 		<template #doc-after>
 			<slot name="doc-after" />
+			<BlogComment />
 		</template>
 
 		<!-- 透传默认主题的其它插槽 -->

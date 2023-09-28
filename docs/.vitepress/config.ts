@@ -15,7 +15,7 @@ const RSS: RSSOptions = {
 };
 
 export default {
-	title: 'ddlazy-ui-plus',
+	title: 'lazy-blog',
 	head: [
 		[
 			'script',
@@ -32,7 +32,7 @@ export default {
 	cleanUrls: true,
 	ignoreDeadLinks: true,
 	sitemap: {
-		hostname: 'https://ddlazy.cn',
+		hostname: 'https://lazydd.github.io/lazy-blog/',
 		transformItems(items) {
 			return items.filter((item) => !item.url.includes('migration'));
 		},

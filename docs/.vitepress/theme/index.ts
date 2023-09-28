@@ -12,10 +12,6 @@ import '../style/vars.css';
 import '../style/scroll.css';
 import '../style/inline-demo.css';
 
-// import { ddButton, ddIcon } from '@/lib/ddlazy-ui-plus.es';
-import ddlazyUi from '@/lib/ddlazy-ui-plus.es.js';
-import '@/lib/index.css';
-import IconList from '../../src/basic/icon/icon.vue';
 export default {
 	...DefaultTheme,
 	Layout: BlogApp,
@@ -23,11 +19,7 @@ export default {
 		const { app } = ctx;
 		DefaultTheme.enhanceApp(ctx);
 		app.component('Demo', Demo);
-		app.component('IconList', IconList);
 		app.component('DemoBlock', DemoBlock);
 		app.component('Image', ZoomImg);
-		// app.use(ddButton);
-		// app.use(ddIcon);
-		app.use(ddlazyUi);
 	},
 };
