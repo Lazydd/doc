@@ -28,10 +28,10 @@
 		"组件库"
 	],
 	"devDependencies": {
-		"@types/node": "^20.5.7",
+		"@types/node": "^20.8.2",
 		"@vitejs/plugin-vue-jsx": "^3.0.2",
 		"less": "^4.2.0",
-		"terser": "^5.19.2",
+		"terser": "^5.21.0",
 		"vitepress": "^1.0.0-beta.7",
 		"vitepress-theme-demoblock-fork": "^3.0.3"
 	},
