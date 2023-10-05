@@ -1,7 +1,7 @@
 import { headerPlugin } from './plugin/headerMdPlugin';
 import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock-fork';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-
+import algoliaSearchOptions from './search/algolia';
 import { en, root, enSearch, zhSearch, zhDemoBlock, enDemoBlock } from './languages';
 
 export default {
@@ -84,12 +84,9 @@ export default {
 					...zhSearch,
 				},
 			},
+			// provider: 'algolia',
+			// options: algoliaSearchOptions,
 		},
-		// algolia: {
-		// 	indexName: 'ddlazy-ui-plus',
-		// 	appId: '',
-		// 	apiKey: '',
-		// },
 		demoblock: {
 			...zhDemoBlock,
 			...enDemoBlock,
