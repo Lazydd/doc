@@ -1,8 +1,33 @@
 <script setup lang="ts">
 import Theme from 'vitepress/theme';
+import { useData } from 'vitepress';
+import { nextTick, provide } from 'vue';
 defineOptions({ name: 'BlogApp' });
 
 const { Layout } = Theme;
+const { isDark } = useData();
+
+const enableTransitions = () =>
+	'startViewTransition' in document &&
+	window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+
+provide('toggle-appearance', async () => {
+	if (!enableTransitions()) {
+		isDark.value = !isDark.value;
+		return;
+	}
+	//https://developer.chrome.com/docs/web-platform/view-transitions/
+	await document.startViewTransition(async () => {
+		isDark.value = !isDark.value;
+		await nextTick();
+	}).ready;
+
+	document.documentElement.animate({
+		duration: 300,
+		easing: 'ease-in',
+		pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`,
+	});
+});
 </script>
 
 <template>
