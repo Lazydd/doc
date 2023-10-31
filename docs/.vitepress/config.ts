@@ -1,10 +1,14 @@
 import { headerPlugin } from './plugin/headerMdPlugin';
+import { MarkdownTransform } from './plugin/markdownTransform';
+import { ChangeLog } from './plugin/changelog';
+import { getChangeLog } from '../../scripts/changelog';
 import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock-fork';
 import { RssPlugin, RSSOptions } from 'vitepress-plugin-rss';
 import algoliaSearchOptions from './search/algolia';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import algoliaSearchOptions from './search/algolia';
+import UnoCSS from 'unocss/vite';
 import { en, root, enSearch, zhSearch, zhDemoBlock, enDemoBlock } from './languages';
+import { siteName, githubRepoLink, githubLink } from './meta';
 
 const RSS: RSSOptions = {
 	title: 'docs',
@@ -12,10 +16,13 @@ const RSS: RSSOptions = {
 	description: '博客模板',
 	language: 'zh-cn',
 	copyright: 'Copyright © 2023-present ddlazy',
+	url: `${githubLink}/feed.rss`,
 };
 
+const [changeLog] = await Promise.all([getChangeLog(800)]);
+
 export default {
-	title: 'ddlazy-ui-plus',
+	title: siteName,
 	head: [
 		[
 			'script',
@@ -55,7 +62,14 @@ export default {
 		},
 	},
 	vite: {
-		plugins: [demoblockVitePlugin(), RssPlugin(RSS), vueJsx()],
+		plugins: [
+			demoblockVitePlugin(),
+			RssPlugin(RSS),
+			vueJsx(),
+			MarkdownTransform(),
+			ChangeLog(changeLog),
+			UnoCSS(),
+		],
 		resolve: {
 			alias: {
 				'@': process.cwd(),
@@ -79,7 +93,7 @@ export default {
 	themeConfig: {
 		i18nRouting: true,
 		logo: '/logo.svg',
-		socialLinks: [{ icon: 'github', link: 'https://github.com/Lazydd' }],
+		socialLinks: [{ icon: 'github', link: githubRepoLink }],
 		search: {
 			provider: 'local',
 			options: {

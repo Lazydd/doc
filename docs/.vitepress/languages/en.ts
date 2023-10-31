@@ -1,4 +1,5 @@
 import type { DefaultTheme } from 'vitepress';
+import { githubRepoLink } from '../meta';
 
 export const config = {
 	en: {
@@ -18,7 +19,7 @@ export const config = {
 				'/en/': getGuide(),
 			},
 			editLink: {
-				pattern: 'https://github.com/Lazydd/doc/edit/main/docs/src/:path',
+				pattern: `${githubRepoLink}/edit/main/docs/src/:path`,
 				text: 'Edit this page on GitHub',
 			},
 			lastUpdated: {

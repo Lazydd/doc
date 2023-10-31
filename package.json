@@ -31,8 +31,12 @@
 	"devDependencies": {
 		"@types/node": "^20.8.2",
 		"@vitejs/plugin-vue-jsx": "^3.0.2",
+		"@vueuse/core": "^10.4.1",
 		"less": "^4.2.0",
+		"md5": "^2.3.0",
+		"simple-git": "^3.20.0",
 		"terser": "^5.21.0",
+		"unocss": "^0.57.1",
 		"vitepress": "^1.0.0-beta.7",
 		"vitepress-theme-demoblock-fork": "^3.0.3",
 		"vue-tsc": "^1.8.13"
@@ -43,8 +47,8 @@
 		"not dead"
 	],
 	"dependencies": {
+		"@iconify/json": "^2.2.135",
 		"@vitejs/plugin-vue": "^4.3.4",
-		"@vueuse/core": "^10.4.1",
 		"medium-zoom": "^1.0.8",
 		"vite": "^4.4.9",
 		"vitepress-plugin-rss": "^0.1.3"
