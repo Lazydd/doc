@@ -3,19 +3,20 @@ import type { MaybeRefOrGetter } from '@vueuse/core';
 import { toValue } from '@vueuse/core';
 import type { CommitInfo } from '../../../scripts/types/changelog';
 import { siteName } from '../meta';
-export function useCommits(allCommits: CommitInfo[], path: MaybeRefOrGetter<string>) {
+export const useCommits = (allCommits: CommitInfo[], path: MaybeRefOrGetter<string>) => {
 	return computed<CommitInfo[]>(() => {
 		let currentPath = toValue(path);
-
+		let name = 'packages/components/' + (path as string).split('/').pop();
 		const commits = allCommits.filter((c) => {
 			return (
 				c.version ||
 				c.path.find((p) => {
 					return (
+						p.includes(name) ||
 						currentPath ===
-						`/${siteName}/${p
-							.toLocaleLowerCase()
-							.replace(/(^docs\/src\/)|(\.md$)/g, '')}`
+							`/${siteName}/${p
+								.toLocaleLowerCase()
+								.replace(/(^docs\/src\/)|(\.md$)/g, '')}`
 					);
 				})
 			);
@@ -26,4 +27,4 @@ export function useCommits(allCommits: CommitInfo[], path: MaybeRefOrGetter<stri
 		// 	return true;
 		// });
 	});
-}
+};
