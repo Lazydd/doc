@@ -73,7 +73,7 @@ const initNode = () => {
 			nodeElement.style.top = top - node.value.offsetHeight - props.space + 'px';
 			break;
 		case 'top-right':
-			nodeElement.style.left = left - width + 'px';
+			nodeElement.style.left = left + width - nodeElement.offsetWidth + 'px';
 			nodeElement.style.top = top - node.value.offsetHeight - props.space + 'px';
 			break;
 		case 'left':
@@ -96,7 +96,7 @@ const initNode = () => {
 			nodeElement.style.top = top + height + props.space + 5 + 'px';
 			break;
 		case 'bottom-right':
-			nodeElement.style.left = left - width + 'px';
+			nodeElement.style.left = left + width - nodeElement.offsetWidth + 'px';
 			nodeElement.style.top = top + height + props.space + 5 + 'px';
 			break;
 	}
