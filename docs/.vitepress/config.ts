@@ -3,21 +3,13 @@ import { MarkdownTransform } from './plugin/markdownTransform';
 import { ChangeLog } from './plugin/changelog';
 import { getChangeLog } from '../../scripts/changelog';
 import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock-fork';
-import { RssPlugin, RSSOptions } from 'vitepress-plugin-rss';
+import { createRssFile } from './plugin/rss';
 import algoliaSearchOptions from './search/algolia';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import UnoCSS from 'unocss/vite';
 import { en, root, enSearch, zhSearch, zhDemoBlock, enDemoBlock } from './languages';
 import { siteName, githubRepoLink, githubLink } from './meta';
-
-const RSS: RSSOptions = {
-	title: 'docs',
-	baseUrl: 'https://lazydd.github.io',
-	description: '博客模板',
-	language: 'zh-cn',
-	copyright: 'Copyright © 2023-present ddlazy',
-	url: `${githubLink}/feed.rss`,
-};
+import type { SiteConfig } from 'vitepress';
 
 const [changeLog] = await Promise.all([getChangeLog(800)]);
 
@@ -52,6 +44,9 @@ export default {
 				customClass: 'demoblock-custom',
 			});
 		},
+		image: {
+			lazyLoading: true,
+		},
 	},
 	vue: {
 		template: {
@@ -64,7 +59,6 @@ export default {
 	vite: {
 		plugins: [
 			demoblockVitePlugin(),
-			RssPlugin(RSS),
 			vueJsx(),
 			MarkdownTransform(),
 			ChangeLog(changeLog),
@@ -89,6 +83,9 @@ export default {
 	locales: {
 		...root,
 		...en,
+	},
+	buildEnd: (config: SiteConfig) => {
+		createRssFile(config);
 	},
 	themeConfig: {
 		i18nRouting: true,
