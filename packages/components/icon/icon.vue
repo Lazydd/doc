@@ -15,7 +15,7 @@ defineOptions({
 defineProps(iconProps);
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .dd-icon {
 	display: inline-flex;
 	height: 1em;

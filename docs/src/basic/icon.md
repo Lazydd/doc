@@ -14,7 +14,7 @@
 	</div>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .dd-icon {
 	font-size: 30px !important;
 	margin-right: 20px;

@@ -9,4 +9,4 @@ defineOptions({
 	<div class="dd-date-picker"></div>
 </template>
 
-<style scoped lang="less"></style>
+<style scoped lang="scss"></style>

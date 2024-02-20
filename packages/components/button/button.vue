@@ -18,6 +18,6 @@ defineOptions({
 defineProps(buttonProps);
 </script>
 
-<style lang="less" scoped>
-@import './style/button.less';
+<style lang="scss" scoped>
+@import './style/button.scss';
 </style>
